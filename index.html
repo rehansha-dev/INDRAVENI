@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Happy Birthday Indu</title>
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Happy Birthday Indu">
+  <meta property="og:description" content="A little heart, made of birthday wishes.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <div id="view">
+    <div id="scene">
+      <div id="tilt">
+        <canvas id="back" aria-hidden="true"></canvas>
+        <canvas id="stage" aria-label="A heart made of the words Happy Birthday Indu in more than 100 languages"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <p id="caption" aria-live="polite">Happy Birthday, Indu</p>
+
+  <button id="zoom" type="button" aria-label="Zoom in to read the words" hidden>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zM10 7H9v2H7v1h2v2h1v-2h2V9h-2V7z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <button id="mute" type="button" aria-label="Mute music" hidden>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <path class="on" d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z" fill="currentColor"/>
+      <path class="off" d="M3 9v6h4l5 4V5L7 9H3zm13.6 3 2.4-2.4-1.4-1.4-2.4 2.4-2.4-2.4-1.4 1.4 2.4 2.4-2.4 2.4 1.4 1.4 2.4-2.4 2.4 2.4 1.4-1.4-2.4-2.4z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <div id="start">
+    <button id="startBtn" type="button">
+      <span class="heart" aria-hidden="true"></span>
+      <span>Tap to open</span>
+    </button>
+  </div>
+
+  <audio id="bgm" src="assets/music.mp3" loop preload="auto"></audio>
+  <script src="bg.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
